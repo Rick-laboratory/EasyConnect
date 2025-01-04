@@ -73,13 +73,13 @@ Connect **Server** and **Client** within the local network without manually ente
 ### CMake Usage
 
 For a **platform-independent** solution, you can build the project using **CMake**, for example:
-
+```bash
 cd YourSolution
 mkdir build
 cd build
 cmake ..
 cmake --build .
-
+```
 # German
 Vernetze **Server** und **Client** im lokalen Netzwerk, ganz ohne IP-Eingabe – und das **verschlüsselt** per AES.
 
@@ -159,3 +159,4 @@ mkdir build
 cd build
 cmake ..
 cmake --build .
+```

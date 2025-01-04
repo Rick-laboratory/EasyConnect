@@ -2,7 +2,7 @@
 
 Vernetze **Server** und **Client** im lokalen Netzwerk, ganz ohne IP-Eingabe – und das **verschlüsselt** per AES.
 
-![EasyConnect Demo]([https://via.placeholder.com/600x200?text=EasyConnect+Demo+Screenshot](https://imgbb.com/))  
+![EasyConnect Demo]([[url=https://ibb.co/pncFmnB][img]https://i.ibb.co/pncFmnB/screeni.png[/img][/url]](https://imgbb.com/))  
 *(Platzhalter-Bild – ersetze es gerne mit einem echten Screenshot.)*
 
 ## Inhaltsverzeichnis

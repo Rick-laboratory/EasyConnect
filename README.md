@@ -79,7 +79,7 @@ cd YourSolution
 mkdir build
 cd build
 cmake ..
-cmake --build .
+cmake --build . ```
 
 # German
 Vernetze **Server** und **Client** im lokalen Netzwerk, ganz ohne IP-Eingabe – und das **verschlüsselt** per AES.

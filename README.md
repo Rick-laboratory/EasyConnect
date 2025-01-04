@@ -1,5 +1,86 @@
 # EasyConnect!
 # English
+Connect **Server** and **Client** within the local network without manually entering an IP address – and encrypted via AES.
+
+![EasyConnect Demo](https://i.ibb.co/jHmXpHP/screeni.png)
+
+## Table of Contents
+- [Introduction](#introduction)
+- [Features](#features)
+- [Project Structure](#project-structure)
+- [Requirements & Build](#requirements--build)
+- [CMake Usage](#cmake-usage)
+
+## Introduction
+**EasyConnect** makes it possible to automatically connect a **Server** and a **Client** on the **local network** (discovery) without manually entering IP addresses. After that, EasyConnect establishes a **TCP connection** and **encrypts** the communication using **AES**.
+
+- **Ideal for** users who want to avoid IP or network configuration hassles.  
+- **Flexible**: Thanks to the standard socket data stream, any type of data can be transferred.
+
+## Features
+
+1. **UDP Broadcast Discovery**  
+   - Automatically “find” the other party in the LAN  
+   - Saves you from manually typing IP addresses or ports
+
+2. **TCP Connection**  
+   - Establishes a socket connection to the discovered IP  
+   - Allows any data or protocols
+
+3. **AES Encryption (CBC mode, PKCS#7)**  
+   - No plaintext visible in the network  
+   - Uses a random IV for each message  
+   - 4-byte length header before IV + ciphertext
+
+4. **Startup Order**  
+   - Optionally, discovery can run indefinitely so that Server & Client can start in any order  
+   - By default: Server broadcasts first, Client listens
+
+## Project Structure
+
+### Important Files
+
+- **DiscoveryCommon.h**  
+  Constants & structures for UDP broadcast (e.g., ports, magic values, tokens, etc.)
+
+- **ServerDiscovery / ClientDiscovery**  
+  Send & receive broadcast packets; handle the discovery logic (how often to send, how long to wait).
+
+- **ServerTCP / ClientTCP**  
+  Establish the TCP connection and include methods like `runConsoleLoop` or `runEchoLoop` for data exchange.
+
+- **AES.h / AES.cpp**  
+  AES implementation (CBC, PKCS#7). Methods: `EncryptCBC_PKCS7`, `DecryptCBC_PKCS7`, etc.
+
+- **NetUtils.h / NetUtils.cpp**  
+  Utility functions like `sendPacket`, `recvPacket`, `generateRandomIV`, `sendAll`, `recvAll`, etc.
+
+- **CryptoConfig.h**  
+  Static 256-bit key (for demo). In a real scenario, a key exchange should be used.
+
+- **main_server.cpp / main_client.cpp**  
+  Entry points for Server & Client, start discovery and then the TCP communication.
+
+## Requirements & Build
+
+- **Operating System**: Originally developed for Windows (WinSock2).  
+  - With `#ifdef _WIN32` or cross-platform socket libraries, it can also run on Linux/macOS.
+- **Compiler**: Visual Studio or another C++ compiler (MinGW, Clang, GCC).  
+- **Libraries**:  
+  - `Ws2_32.lib` (Windows) must be linked (already handled via pragma).  
+  - No additional external libraries needed (AES & discovery are self-implemented).
+
+### CMake Usage
+
+For a **platform-independent** solution, you can build the project using **CMake**, for example:
+
+```bash
+cd YourSolution
+mkdir build
+cd build
+cmake ..
+cmake --build .
+
 # German
 Vernetze **Server** und **Client** im lokalen Netzwerk, ganz ohne IP-Eingabe – und das **verschlüsselt** per AES.
 

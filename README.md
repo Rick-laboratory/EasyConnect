@@ -1,8 +1,7 @@
 # EasyConnect!
+![EasyConnect Demo](https://i.ibb.co/jHmXpHP/screeni.png)
 # English
 Connect **Server** and **Client** within the local network without manually entering an IP address – and encrypted via AES.
-
-![EasyConnect Demo](https://i.ibb.co/jHmXpHP/screeni.png)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -83,7 +82,6 @@ cmake --build .
 # German
 Vernetze **Server** und **Client** im lokalen Netzwerk, ganz ohne IP-Eingabe – und das **verschlüsselt** per AES.
 
-![EasyConnect Demo](https://i.ibb.co/jHmXpHP/screeni.png)
 
 ## Inhaltsverzeichnis
 - [Introduction](#introduction)

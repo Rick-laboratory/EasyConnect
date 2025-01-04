@@ -1,5 +1,6 @@
-# EasyConnect
-
+# EasyConnect!
+# English
+# German
 Vernetze **Server** und **Client** im lokalen Netzwerk, ganz ohne IP-Eingabe – und das **verschlüsselt** per AES.
 
 ![EasyConnect Demo](https://i.ibb.co/jHmXpHP/screeni.png)

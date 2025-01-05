@@ -82,15 +82,6 @@ cmake --build .
 # German
 Vernetze **Server** und **Client** im lokalen Netzwerk, ganz ohne IP-Eingabe – und das **verschlüsselt** per AES.
 
-
-## Inhaltsverzeichnis
-- [Introduction](#introduction)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Requirements & Build](#requirements--build)
-- [CMake Usage](#cmake-usage)
-
-
 ## Introduction
 **EasyConnect** ermöglicht es, einen **Server** und einen **Client** im **lokalen Netzwerk** automatisch miteinander zu verbinden (Discovery), ohne IP-Adressen händisch einzugeben. Anschließend baut EasyConnect eine **TCP-Verbindung** auf und **verschlüsselt** die Kommunikation via **AES**.
 
